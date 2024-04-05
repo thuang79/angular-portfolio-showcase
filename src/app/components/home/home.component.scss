@@ -1,0 +1,51 @@
+.container {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Align items vertically in the center */
+    max-width: 1200px; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    flex: 1; /* Take up remaining space */
+}
+
+.image-container {
+    flex: 0 0 300px; /* Do not grow, do not shrink, start with 300px width */
+    padding-left: 20px; /* Add some space between the text and the image */
+}
+
+img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    color: #333; 
+    font-size: 50px; 
+    text-align: left; 
+    margin-left: 100px; /* Adjusted */
+    margin-right: 100px; /* Adjusted */
+}
+
+h2, h3 {
+    text-align: left;
+    margin-left: 100px; /* Adjusted */
+    margin-right: 100px; /* Adjusted */
+}
+
+p {
+    color: #666; 
+    font-size: 1.2em; 
+    line-height: 1.5; 
+    text-align: justify;
+    margin-bottom: 20px; 
+    margin-top: 30px;
+    margin-left: 100px; /* Adjusted */
+    margin-right: 100px; /* Adjusted */
+}
+
+.software-developer {
+    font-style: italic;
+    text-align: left;
+}
