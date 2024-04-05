@@ -1,5 +1,44 @@
 <header>
   <h1>{{ title }}</h1>
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/categories"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          >Categories</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/tags"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Tags</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
   <section id="side-nav">
@@ -23,13 +62,6 @@
       ></app-tags>
     </article>
   </section>
-  <section id="projects">
-    <app-projects
-      [categoryFilter]="categoryFilter"
-      (newCategoryFilterEvent)="setCategoryFilter($event)"
-      [tagFilter]="tagFilter"
-      (newTagFilterEvent)="setTagFilter($event)"
-    ></app-projects>
-  </section>
+  <router-outlet></router-outlet>
 </main>
 <footer>&copy; {{ date.getFullYear() }} {{ author }}</footer>
