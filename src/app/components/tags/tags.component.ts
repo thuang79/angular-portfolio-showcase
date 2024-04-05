@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Tag } from '../model/tag';
+import { Tag } from '../../model/tag';
 // import { TAGS } from '../data/tags';
-import { TagService } from '../services/tag.service';
+import { TagService } from '../../services/tag.service';
 
 @Component({
   selector: 'app-tags',
@@ -16,7 +16,7 @@ export class TagsComponent {
   // tags = TAGS;
   constructor(private tagService: TagService) {}
 
-  // category = CATEGORIES;
+  // categories = CATEGORIES;
   tags: Tag[] = [];
   getTags(): void {
     this.tags = this.tagService.getTags();

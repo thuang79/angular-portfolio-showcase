@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-import { ProjectsComponent } from './projects/projects.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { TagsComponent } from './tags/tags.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectComponent } from './components/project/project.component';
 
-import { Project } from './model/project';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { TagsComponent } from './components/tags/tags.component';
+
 import { Category } from './model/category';
 import { Tag } from './model/tag';
+import { Project } from './model/project';
 
 import { PortfolioFilterPipe } from './pipes/portfolio-filter.pipe';
 
@@ -16,10 +18,13 @@ import { PortfolioFilterPipe } from './pipes/portfolio-filter.pipe';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
     CommonModule, 
+    RouterOutlet, 
+    RouterLink,
+    RouterLinkActive,
     PortfolioFilterPipe,
     ProjectsComponent,
+    ProjectComponent,
     CategoriesComponent,
     TagsComponent
   ],
@@ -38,14 +43,26 @@ export class AppComponent {
 
   setCategoryFilter(category: Category) {
     this.categoryFilter = category;
+    this.tagFilter = undefined;
   }
 
   setTagFilter(tag: Tag) {
     this.tagFilter = tag;
+    this.categoryFilter = undefined;
   }
 
   clearFilters() {
     this.categoryFilter = undefined;
     this.tagFilter = undefined;
+  }
+
+  selectedProject?: Project;
+
+  setSelectedProject(project: Project) {
+    this.selectedProject = project;
+  }
+
+  clearSelectedProject() {
+    this.selectedProject = undefined;
   }
 }

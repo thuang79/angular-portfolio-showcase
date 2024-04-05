@@ -1,5 +1,25 @@
 header {
   margin: 0 1rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 0 1rem;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &.active {
+          color: #4aa;
+        }
+      }
+    }
+  }
 }
 
 main {
@@ -17,7 +37,7 @@ main {
     border-radius: 1rem;
     padding: 1rem;
     align-self: flex-start;
-    width: 20rem;
+    width: 10rem;
     div {
       cursor: pointer;
 
@@ -26,16 +46,26 @@ main {
       }
     }
   }
-  app-projects {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
+
+  #projects,
+  #project {
+    width: 100%;
   }
 }
-
+app-projects,
+app-project {
+  width: 100%;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // gap: 1rem;
+  // align-items: flex-start;
+  // justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+}
 footer {
   font-size: 0.8rem;
   padding-right: 1rem;
