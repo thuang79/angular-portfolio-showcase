@@ -1,0 +1,66 @@
+article {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .project-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .project-card div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  footer div span {
+    font-weight: bold;
+  }
+  

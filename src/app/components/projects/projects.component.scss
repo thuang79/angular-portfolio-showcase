@@ -1,0 +1,70 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  article {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    &.hidden {
+      display: none;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .project-card {
+    display: flex;
+    padding: 20px;
+  
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+  
+    h2 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+  }
+  
+  footer {
+    background: #eaeaea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    div {
+      a {
+        color: #007bff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      span {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  

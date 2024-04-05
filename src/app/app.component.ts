@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectComponent } from './components/project/project.component';
@@ -40,6 +41,8 @@ export class AppComponent {
   
   categoryFilter: Category | undefined;
   tagFilter: Tag | undefined;
+
+  constructor(public router: Router) {}
 
   setCategoryFilter(category: Category) {
     this.categoryFilter = category;

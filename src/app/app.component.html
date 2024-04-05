@@ -1,5 +1,7 @@
 <header>
-  <h1>{{ title }}</h1>
+  <div class="brand">
+    <h1>{{ title | uppercase}}</h1>
+  </div>
   <nav>
     <ul>
       <li>
@@ -8,7 +10,16 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           ariaCurrentWhenActive="page"
-          >Home</a
+          >01. Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          >0.2 About</a
         >
       </li>
       <li>
@@ -17,31 +28,14 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           ariaCurrentWhenActive="page"
-          >Projects</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/categories"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          ariaCurrentWhenActive="page"
-          >Categories</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/tags"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Tags</a
+          >0.3 Portfolio</a
         >
       </li>
     </ul>
   </nav>
 </header>
 <main>
-  <section id="side-nav">
+  <section id="side-nav" [class.hidden]="!(router.url === '/projects' || router.url.startsWith('/projects/categories'))">
     <article *ngIf="categoryFilter || tagFilter">
       <h2>Filter:</h2>
       <div class="current-filter" (click)="clearFilters()">
