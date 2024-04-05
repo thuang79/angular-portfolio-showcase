@@ -1,70 +1,83 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e7e7e7;
-  padding: 0.5rem 1rem;
-  margin: 15px;
-  width: 96%;
-}
-
-.brand {
-  flex: 1;
-}
-
-nav {
-  display: flex; 
-  gap: 1rem; 
-  margin-left: auto; 
-}
-
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-  margin-left: auto; 
-}
-
-
-main {
-  display: flex;
-  flex: 1;
-}
-
-#side-nav {
-  margin-left: 1rem;
-  text-align: right;
-  background-color: #eee;
-  border-radius: 1rem;
-  padding: 1rem;
-  align-self: flex-start;
-  width: 10rem;
-  div {
-    cursor: pointer;
-
-    &.active {
-      background-color: #ccc;
+  margin: 0 1rem;
+  margin-left: 100px;
+  margin-right: 100px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 0 1rem;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &.active {
+          color: green;
+        }
+      }
     }
   }
 }
 
-#side-nav.hidden {
-  display: none;
+main {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  min-width: 460px;
+  width: 100%;
+  #side-nav {
+    margin: 1rem 0; 
+    text-align: center; 
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    div {
+      cursor: pointer;
+      &.active {
+        background-color: #ccc;
+      }
+    }
+  }
+  #side-nav.hidden {
+    display: none;
+  }
+
+  #projects,
+  #project {
+    width: 100%;
+  }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row; 
+    align-items: flex-start; 
+    #side-nav {
+      margin-right: 1rem; 
+      text-align: right; 
+      width: 10rem; 
+    }
+  }
+}
+
+app-projects,
+app-project {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
 }
 
 footer {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  border-top: 1px solid #e7e7e7;
+  font-size: 0.8rem;
+  padding-right: 1rem;
+  align-self: flex-end;
 }
