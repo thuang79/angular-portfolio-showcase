@@ -1,5 +1,7 @@
+/* Base styles */
 .container {
     display: flex; 
+    flex-direction: column; /* Stack content and image vertically on smaller screens */
     align-items: center; 
     max-width: 1200px; 
     margin: 0 auto;
@@ -8,11 +10,12 @@
 
 .content {
     flex: 1;
+    text-align: center; /* Center text on smaller screens */
 }
 
 .image-container {
     flex: 0 0 300px; 
-    padding-left: 20px; 
+    padding: 20px; /* Add some padding around the image */
 }
 
 img {
@@ -20,32 +23,57 @@ img {
     height: auto; 
 }
 
+h1, h2, h3, p {
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
 h1 {
     color: #333; 
-    font-size: 50px; 
-    text-align: left; 
-    margin-left: 100px; 
-    margin-right: 100px; 
+    font-size: 40px; /* Reduce font size for smaller screens */
 }
 
 h2, h3 {
-    text-align: left;
-    margin-left: 100px; 
-    margin-right: 100px; 
+    font-size: 30px; /* Reduce font size for smaller screens */
 }
 
 p {
     color: #666; 
-    font-size: 1.2em; 
+    font-size: 1em; /* Reduce font size for smaller screens */
     line-height: 1.5; 
     text-align: justify;
     margin-bottom: 20px; 
-    margin-top: 30px;
-    margin-left: 100px; 
-    margin-right: 100px; 
+    margin-top: 20px;
 }
 
 .software-developer {
     font-style: italic;
-    text-align: left;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Display content and image side by side */
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    h1, h2, h3, p {
+        margin-left: 100px; 
+        margin-right: 100px; 
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2, h3 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
 }

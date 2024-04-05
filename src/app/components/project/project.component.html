@@ -8,6 +8,16 @@
       [src]="'assets/images/' + project.image"
       alt="Image of {{ project.title }}"
     />
+    <img
+            *ngIf="project.image2"
+            [src]="'assets/images/' + project.image2"
+            alt="Image 2 of {{ project.title }}"
+        />
+        <img
+            *ngIf="project.image3"
+            [src]="'assets/images/' + project.image3"
+            alt="Additional Image 3 of {{ project.title }}"
+        />
     <div>
       <h2>{{ project.title | uppercase }}</h2>
       <div>{{ project.excerpt }}</div>
