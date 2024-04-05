@@ -1,37 +1,37 @@
 .container {
-    display: flex; /* Use Flexbox */
-    align-items: center; /* Align items vertically in the center */
-    max-width: 1200px; /* Adjust the width as needed */
+    display: flex; 
+    align-items: center; 
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .content {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
 }
 
 .image-container {
-    flex: 0 0 300px; /* Do not grow, do not shrink, start with 300px width */
-    padding-left: 20px; /* Add some space between the text and the image */
+    flex: 0 0 300px; 
+    padding-left: 20px; 
 }
 
 img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 h1 {
     color: #333; 
     font-size: 50px; 
     text-align: left; 
-    margin-left: 100px; /* Adjusted */
-    margin-right: 100px; /* Adjusted */
+    margin-left: 100px; 
+    margin-right: 100px; 
 }
 
 h2, h3 {
     text-align: left;
-    margin-left: 100px; /* Adjusted */
-    margin-right: 100px; /* Adjusted */
+    margin-left: 100px; 
+    margin-right: 100px; 
 }
 
 p {
@@ -41,8 +41,8 @@ p {
     text-align: justify;
     margin-bottom: 20px; 
     margin-top: 30px;
-    margin-left: 100px; /* Adjusted */
-    margin-right: 100px; /* Adjusted */
+    margin-left: 100px; 
+    margin-right: 100px; 
 }
 
 .software-developer {

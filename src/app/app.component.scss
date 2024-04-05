@@ -16,13 +16,13 @@ header {
 }
 
 .brand {
-  flex: 1; /* Allow the brand to take up remaining space */
+  flex: 1;
 }
 
 nav {
-  display: flex; /* Display the navigation links as a flex container */
-  gap: 1rem; /* Add some space between the links */
-  margin-left: auto; /* Push the links to the right */
+  display: flex; 
+  gap: 1rem; 
+  margin-left: auto; 
 }
 
 
@@ -42,7 +42,7 @@ main {
 }
 
 #side-nav {
-  margin-left: 1rem; /* Change margin-right to margin-left */
+  margin-left: 1rem;
   text-align: right;
   background-color: #eee;
   border-radius: 1rem;
@@ -61,12 +61,6 @@ main {
 #side-nav.hidden {
   display: none;
 }
-
-
-// router-outlet {
-//   flex: 1;
-//   padding: 1rem;
-// }
 
 footer {
   background-color: #f8f9fa;
