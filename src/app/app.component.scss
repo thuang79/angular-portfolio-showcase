@@ -1,0 +1,43 @@
+header {
+  margin: 0 1rem;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 460px;
+  width: 100%;
+  #side-nav {
+    margin-right: 1rem;
+    text-align: right;
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-self: flex-start;
+    width: 20rem;
+    div {
+      cursor: pointer;
+
+      &.active {
+        background-color: #ccc;
+      }
+    }
+  }
+  app-projects {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  padding-right: 1rem;
+  align-self: flex-end;
+}
