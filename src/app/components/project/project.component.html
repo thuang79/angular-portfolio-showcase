@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <article>
   <header>
     <button type="button" (click)="goBack()">Back</button>
     <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="github-button">
-      View GitHub Repo
+      <i class="fab fa-github"></i> View GitHub Repo
     </a>
+    
   </header>
   <section class="project-card">
     <h2>{{ project.title | uppercase }}</h2>

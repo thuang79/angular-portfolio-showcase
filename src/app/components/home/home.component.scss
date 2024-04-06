@@ -43,12 +43,18 @@ h1, h2, h3, p {
 }
 
 h1 {
-    color: #333; 
+    font-family: 'Montserrat', sans-serif;
+    color: #1c494c; 
     font-size: 40px; /* Reduce font size for smaller screens */
+    ;
 }
 
 h2, h3 {
     font-size: 30px; /* Reduce font size for smaller screens */
+}
+
+h2{
+    color: #73CADC
 }
 
 p {

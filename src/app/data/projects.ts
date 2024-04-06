@@ -10,7 +10,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'sanrio-game-02.png',
-      images: ['sanrio-game-01.png', 'sanrio-game-02.png', 'sanrio-game-03.png', 'sanrio-game-04.png', 'sanrio-game-05.png'],
+      images: ['sanrio-game-01.png', 'sanrio-game-02.png', 'sanrio-game-03.png', 'sanrio-game-05.png', 'sanrio-game-04.png'],
       githubUrl: 'https://github.com/thuang79/SSD-2000-high-low-sanrio-game-tracy_huang.git',
       snippets: [
         'Snippet 1 for Project 1',
