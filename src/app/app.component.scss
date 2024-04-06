@@ -9,6 +9,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
     li {
@@ -19,7 +20,7 @@ header {
         font-size: 1.2rem;
         cursor: pointer;
         &.active {
-          color: green;
+          color: #3689B7;
         }
       }
     }
@@ -57,7 +58,8 @@ main {
 }
 
 .title-home{
-  color: rgb(155, 155, 155);
+  color: #DC9473;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Media query for desktop screens */
@@ -83,7 +85,9 @@ app-project {
 }
 
 footer {
+  color: rgb(185, 185, 185);
   font-size: 0.8rem;
   padding-right: 1rem;
-  align-self: flex-end;
+  align-self: center;
+  margin-top: 50px;
 }
