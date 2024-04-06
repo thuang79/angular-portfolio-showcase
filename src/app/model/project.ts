@@ -9,8 +9,7 @@ export interface Project {
   url: string | null;
   published_date: string | null;
   image: string | null;
-  image2: string | null; 
-  image3: string | null;
+  images: string[];
   githubUrl: string | null;  
   snippets: string[];
   thumb: string | null;
