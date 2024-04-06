@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 <section id="projects">
   <article
     *ngFor="let project of projects | portfolioFilterPipe : tagFilter"
@@ -13,21 +15,21 @@
         />
         <div>
           <h2>{{ project.title | uppercase }}</h2>
-          <div>{{ project.excerpt }}</div>
+          <div class="excerpt-p">{{ project.excerpt }}</div>
         </div>
       </section>
     </a>
     <footer>
       <div *ngIf="project.category">
-        Category:
+        <strong>Category: </strong>
         <a [href]="'/projects/category/' + project.category.slug">{{
           project.category.name
         }}</a>
       </div>
       <div *ngIf="project.tags?.length">
-        Tags:
+        <strong>Tags:</strong>
         <span *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
-          {{ tag.name }}
+          {{ tag.name }} <span class="tag-divider"> | </span>
         </span>
       </div>
     </footer>
