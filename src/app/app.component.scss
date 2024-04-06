@@ -1,3 +1,47 @@
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 header {
   // margin: 0 1rem;
   margin-top: 75px;
@@ -27,6 +71,19 @@ header {
   }
 }
 
+#toggle-btn {
+  display: block;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeIn 1s ease-out; 
+  margin-top: 1rem;
+  
+}
+
 main {
   display: flex;
   flex-direction: column; 
@@ -40,6 +97,7 @@ main {
     border-radius: 1rem;
     padding: 1rem;
     width: 100%;
+    animation: slideDown 1.0s ease-out forwards;
     div {
       cursor: pointer;
       &.active {
@@ -71,6 +129,10 @@ main {
       margin-right: 1rem; 
       text-align: right; 
       width: 10rem; 
+      animation: slideInFromLeft 1.0s ease-out forwards;
+    }
+    #toggle-btn {
+      margin-left: 100px;
     }
   }
 }

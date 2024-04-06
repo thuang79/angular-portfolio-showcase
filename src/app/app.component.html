@@ -1,5 +1,7 @@
 <header>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
 
   <div class="brand">
     <h1 class="title-home">{{ title | uppercase}}</h1>
@@ -37,7 +39,9 @@
   </nav>
 </header>
 <main>
-  <section id="side-nav" [class.hidden]="!(router.url === '/projects' || router.url.startsWith('/projects/categories'))">
+  <button id="toggle-btn" (click)="toggleSideNav()" *ngIf="router.url === '/projects' || router.url.startsWith('/projects/categories')">
+    🌸</button>
+  <section id="side-nav" [class.hidden]="sideNavHidden">
     <article *ngIf="categoryFilter || tagFilter">
       <h2>Filter:</h2>
       <div class="current-filter" (click)="clearFilters()">

@@ -68,4 +68,10 @@ export class AppComponent {
   clearSelectedProject() {
     this.selectedProject = undefined;
   }
+
+  sideNavHidden = true;
+
+  toggleSideNav() {
+    this.sideNavHidden = !this.sideNavHidden;
+  }
 }
