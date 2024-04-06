@@ -1,28 +1,37 @@
 <article>
   <header>
     <button type="button" (click)="goBack()">Back</button>
+    <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="github-button">
+      View GitHub Repo
+    </a>
   </header>
   <section class="project-card">
+    <h2>{{ project.title | uppercase }}</h2>
+    <div class="project-details">
+      <!-- <div>{{ project.excerpt }}</div> -->
+      <div [innerHTML]="project.body">{{ project.body }}</div>
+    </div>
     <img
       *ngIf="project.image"
       [src]="'assets/images/' + project.image"
       alt="Image of {{ project.title }}"
     />
     <img
-            *ngIf="project.image2"
-            [src]="'assets/images/' + project.image2"
-            alt="Image 2 of {{ project.title }}"
-        />
-        <img
-            *ngIf="project.image3"
-            [src]="'assets/images/' + project.image3"
-            alt="Additional Image 3 of {{ project.title }}"
-        />
-    <div>
-      <h2>{{ project.title | uppercase }}</h2>
-      <div>{{ project.excerpt }}</div>
-      <div [innerHTML]="project.body">{{ project.body }}</div>
-    </div>
+      *ngIf="project.image2"
+      [src]="'assets/images/' + project.image2"
+      alt="Image 2 of {{ project.title }}"
+    />
+    <img
+      *ngIf="project.image3"
+      [src]="'assets/images/' + project.image3"
+      alt="Additional Image 3 of {{ project.title }}"
+    />
+    <section *ngIf="project.snippets.length" class="snippets-section">
+      <h3>Code Snippets</h3>
+      <ul>
+        <li *ngFor="let snippet of project.snippets">{{ snippet }}</li>
+      </ul>
+    </section>
   </section>
   <footer>
     <div *ngIf="project.category">
