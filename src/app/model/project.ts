@@ -10,7 +10,9 @@ export interface Project {
   published_date: string | null;
   image: string | null;
   image2: string | null; 
-  image3: string | null;  
+  image3: string | null;
+  githubUrl: string | null;  
+  snippets: string[];
   thumb: string | null;
   created_at: string;
   updated_at: string;

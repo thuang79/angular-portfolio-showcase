@@ -35,7 +35,7 @@ import { PortfolioFilterPipe } from './pipes/portfolio-filter.pipe';
 
 // App component class
 export class AppComponent {
-  title = "Tracy's Showcase";
+  title = "TH PORTFOLIO";
   date = new Date();
   author = 'Tracy Huang';
   

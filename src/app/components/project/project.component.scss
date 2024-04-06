@@ -22,11 +22,12 @@ button {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 15px 30px;
+  padding: 8px 40px;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 18px;
+  font-size: 14px;
+
   &:hover {
       background-color: #45a049;
   }
@@ -79,6 +80,46 @@ footer div span {
   color: #4CAF50;
   font-size: 18px;
 }
+
+.github-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  text-decoration: none; /* Remove underline from anchor */
+}
+
+.github-button:hover {
+  background-color: #222;
+}
+
+.snippets-section {
+  margin-top: 30px;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      background-color: #e8e8e8;
+      margin-bottom: 5px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+
 
 @media (min-width: 768px) {
   .project-card {
