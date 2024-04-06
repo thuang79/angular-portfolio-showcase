@@ -33,4 +33,15 @@ export class ProjectComponent {
   goBack(): void {
     this.location.back();
   }
+  
+  currentImageIndex: number = 0;
+
+  changeImage(step: number): void {
+    this.currentImageIndex += step;
+    if (this.currentImageIndex >= this.project.images.length) {
+      this.currentImageIndex = 0;
+    } else if (this.currentImageIndex < 0) {
+      this.currentImageIndex = this.project.images.length - 1;
+    }
+  }
 }

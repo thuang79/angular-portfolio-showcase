@@ -10,8 +10,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'sanrio-game-02.png',
-      image2: 'sanrio-game-01.png',
-      image3: 'sanrio-game-03.png',
+      images: ['sanrio-game-01.png', 'sanrio-game-02.png', 'sanrio-game-03.png', 'sanrio-game-04.png', 'sanrio-game-05.png'],
       githubUrl: 'https://github.com/thuang79/SSD-2000-high-low-sanrio-game-tracy_huang.git',
       snippets: [
         'Snippet 1 for Project 1',
@@ -36,8 +35,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'wildpath-01.png',
-      image2: 'wildpath-01.png',
-      image3: 'sanrio-game-01.png',
+      images: ['wildpath-01.png', 'wildpath-02.png', 'wildpath-03.png'],
       githubUrl: 'https://github.com/AlexAAguila/SSDP-2600.git',
       snippets: [
         'Snippet 1 for Project 1',
@@ -57,7 +55,7 @@ export const PROJECTS: Project[] = [
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: 'ATDB Movie App with React',
       slug: 'movie-app-with-react',
       excerpt: "ATDB is a neon-lit movie database that illuminates your film journey. With its vibrant design, ATDB adds flair to your movie search, making it visually exciting. Explore classics and indie gems in style with ATDB's neon-themed interface, enhancing your cinematic experience.",
@@ -65,8 +63,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'movie-app-02.png',
-      image2: 'movie-app-01.png',
-      image3: null,
+      images: ['movie-app-01.png', 'movie-app-02.png', 'movie-app-03.png'],
       githubUrl: 'https://github.com/thuang79/tracy-ayesha-movie-app.git',
       snippets: [
         'Snippet 1 for Project 1',
@@ -92,8 +89,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'news-page-01.png',
-      image2: 'news-page-02.png',
-      image3: null,
+      images: ['news-page-01.png', 'news-page-02.png', 'news-page-03.png'],
       githubUrl: 'https://github.com/thuang79/a03-news-home-page.git',
       snippets: [
         'Snippet 1 for Project 1',

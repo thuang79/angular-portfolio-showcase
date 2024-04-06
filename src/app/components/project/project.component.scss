@@ -82,7 +82,7 @@ footer div span {
 }
 
 .github-button {
-  background-color: #333;
+  background-color: #4078c0;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -116,6 +116,72 @@ footer div span {
       margin-bottom: 5px;
       padding: 10px;
       border-radius: 5px;
+    }
+  }
+}
+
+.image-slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: none; /* Hide all images by default */
+    transition: opacity 0.5s ease;
+
+    &.active {
+      display: block; /* Show the active image */
+    }
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(204, 204, 204, 0.418); /* Changed from rgba(0, 0, 0, 0.5) to black */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+
+  &:hover {
+    background-color: #afafafb6; /* Darker shade of black for hover effect */
+  }
+}
+
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; /* Rounded corners for the right button */
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      cursor: pointer;
+      height: 5px;
+      width: 5px;
+      margin: 3px; /* Adjust space between dots */
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    
+      &.active {
+        background-color: #797979; /* Highlight the active dot */
+      }
     }
   }
 }
