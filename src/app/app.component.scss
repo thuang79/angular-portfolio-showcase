@@ -81,7 +81,6 @@ header {
   cursor: pointer;
   animation: fadeIn 1s ease-out; 
   margin-top: 1rem;
-  
 }
 
 main {
@@ -133,6 +132,9 @@ main {
     }
     #toggle-btn {
       margin-left: 100px;
+        &:hover {
+          transform: translateY(-5px);
+      }
     }
   }
 }

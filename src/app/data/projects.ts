@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
       id: 3,
       title: 'ATDB Movie App with React',
       slug: 'movie-app-with-react',
-      excerpt: "ATDB is a neon-lit movie database that illuminates your film journey. With its vibrant design, ATDB adds flair to your movie search, making it visually exciting. Explore classics and indie gems in style with ATDB's neon-themed interface, enhancing your cinematic experience.",
+      excerpt: "ATDB is a neon-lit movie database that illuminates your film journey. Explore classics and indie gems in style with ATDB's neon-themed interface, enhancing your cinematic experience.",
       body: "<p>Immerse yourself in a world of cinema with ATDB, a neon-lit movie database that illuminates your film journey. Its vibrant design adds flair to your movie search, making it visually exciting to explore classics and indie gems. ATDB's neon-themed interface enhances your cinematic experience, bringing a touch of the cinematic magic to your screen. Built with React, this app combines stunning visuals with smooth functionality, ensuring an immersive and enjoyable movie exploration experience.      </p>",
       url: null,
       published_date: null,
