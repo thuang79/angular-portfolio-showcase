@@ -22,9 +22,7 @@
     <footer>
       <div *ngIf="project.category">
         <strong>Category: </strong>
-        <a [href]="'/projects/category/' + project.category.slug">{{
-          project.category.name
-        }}</a>
+        <a [href]="'/projects/categories/' + project.category.slug">{{ project.category.name }}</a>
       </div>
       <div *ngIf="project.tags?.length">
         <strong>Tags:</strong>
