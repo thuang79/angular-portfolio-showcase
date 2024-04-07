@@ -1,18 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 <article>
   <header>
-    <button type="button" (click)="goBack()">Back</button>
-    <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="github-button">
-      <i class="fab fa-github"></i> View GitHub Repo
+    <span class="back-icon" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i>
+    </span>
+    <h2>{{ project.title | uppercase }}</h2>
+    <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="github-icon">
+      <i class="fab fa-github"></i>
     </a>
+    
     
   </header>
   <section class="project-card">
-    <h2>{{ project.title | uppercase }}</h2>
-    <div class="project-details">
-      <!-- <div>{{ project.excerpt }}</div> -->
-      <div [innerHTML]="project.body">{{ project.body }}</div>
-    </div>
     <div class="image-slider">
       <img
         *ngFor="let image of project.images; let i = index"
@@ -27,6 +28,10 @@
       <button class="next" (click)="changeImage(1)">&#10095;</button>
     </div>
     
+    <div class="project-details">
+      <!-- <div>{{ project.excerpt }}</div> -->
+      <div [innerHTML]="project.body">{{ project.body }}</div>
+    </div>
     
     <section *ngIf="project.snippets.length" class="snippets-section">
       <h3>Code Snippets</h3>
@@ -37,12 +42,12 @@
   </section>
   <footer>
     <div *ngIf="project.category">
-      Category: <span>{{ project.category.name }}</span>
+      <strong>Category: </strong><span>{{ project.category.name }}</span>
     </div>
     <div *ngIf="project.tags.length">
-      Tags:
+      <strong>Tags:</strong>
       <span *ngFor="let tag of project.tags">
-        {{ tag.name }}
+        {{ tag.name }} <span class="tag-divider"> | </span>
       </span>
     </div>
   </footer>

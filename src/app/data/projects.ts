@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'movie-app-02.png',
-      images: ['movie-app-01.png', 'movie-app-02.png', 'movie-app-03.png'],
+      images: ['movie-app-02.png', 'movie-app-01.png', 'movie-app-03.png'],
       githubUrl: 'https://github.com/thuang79/tracy-ayesha-movie-app.git',
       snippets: [
         'Snippet 1 for Project 1',
