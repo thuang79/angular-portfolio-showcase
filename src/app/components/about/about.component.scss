@@ -56,11 +56,7 @@ h1, h2{
     text-align: justify;
     margin-bottom: 20px; 
     margin-top: 30px;
-    margin-left: 70px;
-}
-
-.toolbox-title{
-    margin-left: 50px;
+    // margin-left: 70px;
 }
 
 .toolbox-container{
@@ -73,7 +69,6 @@ h1, h2{
     justify-content: center;
     gap: 20px;
     margin-top: 50px;
-    margin-left: 50px;
 }
 
 .toolbox-icons div {
@@ -105,6 +100,7 @@ h1, h2{
 
     .about-content, .toolbox-icons {
         text-align: left;
+        margin-left: 70px;
     }
     .toolbox-container{
         margin-right:70px;
