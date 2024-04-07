@@ -1,7 +1,6 @@
-/* Base styles */
 .container {
     display: flex; 
-    flex-direction: column; /* Stack content and image vertically on smaller screens */
+    flex-direction: column; 
     align-items: center; 
     max-width: 1200px; 
     margin: 0 auto;
@@ -22,13 +21,13 @@
 
 .content {
     flex: 1;
-    text-align: center; /* Center text on smaller screens */
+    text-align: center;
     animation: slideInFromRight 1.5s ease-out forwards;
 }
 
 .image-container {
     flex: 0 0 300px; 
-    padding: 20px; /* Add some padding around the image */
+    padding: 20px; 
     animation: slideInFromRight 1.5s ease-out forwards;
 }
 
@@ -45,12 +44,12 @@ h1, h2, h3, p {
 h1 {
     font-family: 'Montserrat', sans-serif;
     color: #1c494c; 
-    font-size: 40px; /* Reduce font size for smaller screens */
+    font-size: 40px;
     ;
 }
 
 h2, h3 {
-    font-size: 30px; /* Reduce font size for smaller screens */
+    font-size: 30px; 
 }
 
 h2{
@@ -59,7 +58,7 @@ h2{
 
 p {
     color: #666; 
-    font-size: 1em; /* Reduce font size for smaller screens */
+    font-size: 1em; 
     line-height: 1.5; 
     text-align: justify;
     margin-bottom: 20px; 
@@ -74,7 +73,7 @@ p {
 /* Media query for desktop screens */
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Display content and image side by side */
+        flex-direction: row; 
     }
 
     .content {

@@ -9,7 +9,6 @@ import { PortfolioFilterPipe } from '../../pipes/portfolio-filter.pipe';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../model/project';
 
-// import the component so that we can use it in the template
 import { ProjectComponent } from '../project/project.component';
 import { ActivatedRoute } from '@angular/router';
 
@@ -45,15 +44,17 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      console.log(params);
       const segment: string = this.route.snapshot.url[1]?.path;
       if (segment === 'categories') {
+        this.isCategoryPage = true;
         this.getProjectsByCategory();
       } else {
+        this.isCategoryPage = false;
         this.getProjects();
       }
     });
   }
+  
 
   @Input() categoryFilter: Category | undefined;
   @Output() newCategoryFilterEvent = new EventEmitter<Category>();
@@ -82,4 +83,7 @@ export class ProjectsComponent implements OnInit {
   setSelectedProject(project: Project): void {
     this.newSelectedProjectEvent.emit(project);
   }
+
+  isCategoryPage: boolean = false;
+
 }

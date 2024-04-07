@@ -1,35 +1,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<section id="projects">
-  <article
-    *ngFor="let project of projects | portfolioFilterPipe : tagFilter"
-    [class.hidden]="categoryFilter && project.category?.id != categoryFilter.id"
-    (click)="setSelectedProject(project)"
-  >
-    <a href="/projects/{{ project?.id }}">
-      <section class="project-card">
-        <img
-          *ngIf="project.image"
-          [src]="'assets/images/' + project.image"
-          alt="Image of {{ project.title }}"
-        />
-        <div>
-          <h2>{{ project.title | uppercase }}</h2>
-          <div class="excerpt-p">{{ project.excerpt }}</div>
+<div class="projects-wrapper">
+  <section id="projects">
+    <article
+      *ngFor="let project of projects | portfolioFilterPipe : tagFilter"
+      [class.hidden]="categoryFilter && project.category?.id != categoryFilter.id"
+      (click)="setSelectedProject(project)"
+    >
+      <a href="/projects/{{ project?.id }}">
+        <section class="project-card">
+          <img
+            *ngIf="project.image"
+            [src]="'assets/images/' + project.image"
+            alt="Image of {{ project.title }}"
+          />
+          <div>
+            <h2>{{ project.title | uppercase }}</h2>
+            <div class="excerpt-p">{{ project.excerpt }}</div>
+          </div>
+        </section>
+      </a>
+      <footer>
+        <div *ngIf="project.category">
+          <strong>Category: </strong>
+          <a [href]="'/projects/categories/' + project.category.slug">{{ project.category.name }}</a>
         </div>
-      </section>
-    </a>
-    <footer>
-      <div *ngIf="project.category">
-        <strong>Category: </strong>
-        <a [href]="'/projects/categories/' + project.category.slug">{{ project.category.name }}</a>
-      </div>
-      <div *ngIf="project.tags?.length">
-        <strong>Tags:</strong>
-        <span *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
-          {{ tag.name }} <span class="tag-divider"> | </span>
-        </span>
-      </div>
-    </footer>
-  </article>
-</section>
+        <div *ngIf="project.tags?.length">
+          <strong>Tags:</strong>
+          <span *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
+            {{ tag.name }} <span class="tag-divider"> | </span>
+          </span>
+        </div>
+      </footer>
+    </article>
+  </section>  
+  <a *ngIf="isCategoryPage" href="/projects" class="back-icon">
+    🌸
+  </a>
+</div>
