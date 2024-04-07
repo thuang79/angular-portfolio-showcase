@@ -44,4 +44,7 @@ export class ProjectComponent {
       this.currentImageIndex = this.project.images.length - 1;
     }
   }
+
+  showSnippetSection: boolean = false;
+
 }

@@ -1,13 +1,15 @@
-@keyframes slideInFromLeft {
+@keyframes fadeIn {
   from {
-      transform: translateX(-100%);
-      opacity: 0;
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      transform: translateX(0);
-      opacity: 1;
+    opacity: 1;
+    transform: translateY(0);
+    
   }
 }
+
 
 * {
   box-sizing: border-box;
@@ -30,7 +32,7 @@ article {
   padding: 20px;
   width: 90%;
   max-width: 960px;
-  animation: slideInFromLeft 1.5s ease-out forwards;
+  animation: fadeIn 1s ease-out; 
 }
 
 /* Header Styles */
@@ -155,17 +157,36 @@ footer .tag-divider {
   margin-bottom: 10px;
 }
 
-.snippets-section ul {
-  list-style-type: none;
-  padding-left: 0;
+.snippet-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.snippets-section ul li {
-  background-color: #e8e8e8;
-  margin-bottom: 5px;
-  padding: 10px;
+.snippet-images img {
+  width: 100%;
+  max-width: 1000px;
   border-radius: 5px;
 }
+
+/* Add these styles */
+.snippet-toggle-btn {
+  background: none;
+  border: none;
+  color: #e48657; 
+  cursor: pointer;
+  font-size: 16px; 
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-weight:bold;
+
+  &:hover {
+    color: #e48657af;  
+  }
+}
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {

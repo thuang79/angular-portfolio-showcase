@@ -10,8 +10,6 @@
     <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="github-icon">
       <i class="fab fa-github"></i>
     </a>
-    
-    
   </header>
   <section class="project-card">
     <div class="image-slider">
@@ -33,12 +31,19 @@
       <div [innerHTML]="project.body">{{ project.body }}</div>
     </div>
     
-    <section *ngIf="project.snippets.length" class="snippets-section">
-      <h3>Code Snippets</h3>
-      <ul>
-        <li *ngFor="let snippet of project.snippets">{{ snippet }}</li>
-      </ul>
+    <button (click)="showSnippetSection = !showSnippetSection" class="snippet-toggle-btn">
+      <i class="fas fa-search"></i>
+      {{ showSnippetSection ? 'Hide' : 'View' }} Code Snippet
+    </button>
+    
+  
+    <section *ngIf="showSnippetSection && project.snippetImages.length" class="snippets-section">
+      <h3>Code Snippet</h3>
+      <div class="snippet-images">
+        <img *ngFor="let snippetImage of project.snippetImages" [src]="'assets/images/' + snippetImage" alt="Code Snippet">
+      </div>
     </section>
+    
   </section>
   <footer>
     <div *ngIf="project.category">

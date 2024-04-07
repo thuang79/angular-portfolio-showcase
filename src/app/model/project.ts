@@ -11,7 +11,7 @@ export interface Project {
   image: string | null;
   images: string[];
   githubUrl: string | null;  
-  snippets: string[];
+  snippetImages: string[];
   thumb: string | null;
   created_at: string;
   updated_at: string;

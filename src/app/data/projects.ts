@@ -9,12 +9,11 @@ export const PROJECTS: Project[] = [
       body: '<p>Utilizing HTML, CSS, and Javascript, I was able to transform a traditional High-Low game into a more engaging and immersive experience for Sanrio enthusiasts. While trying to save Sanrio Land, users are able to experience an auditory component when playing the game. Furthermore, each time a user successfully completes the game, they are rewarded with a different and unique end screen character, making every victory in the game a personalized achievement!</p>',
       url: null,
       published_date: null,
-      image: 'sanrio-game-02.png',
-      images: ['sanrio-game-01.png', 'sanrio-game-02.png', 'sanrio-game-03.png', 'sanrio-game-05.png', 'sanrio-game-04.png'],
+      image: 'sanrio-game-001.png',
+      images: ['sanrio-game-001.png', 'sanrio-game-01.png', 'sanrio-game-03.png', 'sanrio-game-05.png', 'sanrio-game-04.png',],
       githubUrl: 'https://github.com/thuang79/SSD-2000-high-low-sanrio-game-tracy_huang.git',
-      snippets: [
-        'Snippet 1 for Project 1',
-        'Snippet 2 for Project 1',
+      snippetImages: [
+        'sanrio-snippet-01.jpeg',
       ],
       thumb: null,
       created_at: '2023-02-23T22:31:23.000000Z',
@@ -35,11 +34,10 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'wildpath-01.png',
-      images: ['wildpath-01.png', 'wildpath-02.png', 'wildpath-03.png'],
+      images: ['wildpath-01.png', 'wildpath-02.png', 'wildpath-03.png', 'wildpath-04.png', 'wildpath-05.png', 'wildpath-06.png', 'wildpath-07.png', 'wildpath-08.png'],
       githubUrl: 'https://github.com/AlexAAguila/SSDP-2600.git',
-      snippets: [
-        'Snippet 1 for Project 1',
-        'Snippet 2 for Project 1',
+      snippetImages: [
+        'wildpath-snippet-01.jpeg',
       ],
       thumb: null,
       created_at: '2023-02-23T22:31:23.000000Z',
@@ -62,12 +60,11 @@ export const PROJECTS: Project[] = [
       body: "<p>Immerse yourself in a world of cinema with ATDB, a neon-lit movie database that illuminates your film journey. Its vibrant design adds flair to your movie search, making it visually exciting to explore classics and indie gems. ATDB's neon-themed interface enhances your cinematic experience, bringing a touch of the cinematic magic to your screen. Built with React, this app combines stunning visuals with smooth functionality, ensuring an immersive and enjoyable movie exploration experience.      </p>",
       url: null,
       published_date: null,
-      image: 'movie-app-02.png',
-      images: ['movie-app-02.png', 'movie-app-01.png', 'movie-app-03.png'],
+      image: 'movie-app-01.png',
+      images: ['movie-app-01.png', 'movie-app-02.png', 'movie-app-03.png', 'movie-app-04.png', 'movie-app-05.png', 'movie-app-06.png'],
       githubUrl: 'https://github.com/thuang79/tracy-ayesha-movie-app.git',
-      snippets: [
-        'Snippet 1 for Project 1',
-        'Snippet 2 for Project 1',
+      snippetImages: [
+        'movie-snippet-01.jpeg',
       ],
       thumb: null,
       created_at: '2023-02-23T22:31:23.000000Z',
@@ -89,11 +86,10 @@ export const PROJECTS: Project[] = [
       url: null,
       published_date: null,
       image: 'news-page-01.png',
-      images: ['news-page-01.png', 'news-page-02.png', 'news-page-03.png'],
+      images: ['news-page-01.png', 'news-page-02.png', 'news-page-03.png', 'news-page-04.png'],
       githubUrl: 'https://github.com/thuang79/a03-news-home-page.git',
-      snippets: [
-        'Snippet 1 for Project 1',
-        'Snippet 2 for Project 1',
+      snippetImages: [
+        'news-snippet-01.jpeg',
       ],
       thumb: null,
       created_at: '2023-02-23T22:31:23.000000Z',
